@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://buicnancij4b1"]
+
+[ext_resource type="Script" uid="uid://d11iu5daoe8rd" path="res://scripts/player.gd" id="1_b0kkn"]
+[ext_resource type="Texture2D" uid="uid://dc32bpficcjyd" path="res://assets/nave-espacial.png" id="1_merdl"]
+[ext_resource type="PackedScene" uid="uid://ck2bydj3ssaar" path="res://prefabs/bullet.tscn" id="2_e4p34"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_b0kkn")
+bullet_scene = ExtResource("2_e4p34")
+
+[node name="Nave-espacial" type="Sprite2D" parent="."]
+scale = Vector2(0.209511, 0.209511)
+texture = ExtResource("1_merdl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.209511, 0.209511)
+polygon = PackedVector2Array(-36, -225, 31, -224, 72, -13, 257, 28, 257, 118, 215, 224, 5, 213, -204, 224, -259, 116, -259, 21, -72, -8)

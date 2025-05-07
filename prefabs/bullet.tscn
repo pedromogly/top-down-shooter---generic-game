@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck2bydj3ssaar"]
+
+[ext_resource type="Script" uid="uid://ddbngbs8nrsbs" path="res://scripts/bullet.gd" id="1_fh0yl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lv25w"]
+
+[node name="bullet" type="Area2D"]
+script = ExtResource("1_fh0yl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lv25w")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(1, 0.117647, 0.215686, 0.913725)
+polygon = PackedVector2Array(-10, 9, -10, -2, 0, -10, 10, -2, 10, 10, -10, 10)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

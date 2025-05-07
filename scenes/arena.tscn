@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpg852t2wcmx5"]
+
+[ext_resource type="PackedScene" uid="uid://buicnancij4b1" path="res://entities/player.tscn" id="1_e05a3"]
+[ext_resource type="PackedScene" uid="uid://ck2bydj3ssaar" path="res://prefabs/bullet.tscn" id="2_wl4x5"]
+
+[node name="arena" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_e05a3")]
+position = Vector2(930, 537)
+bullet_scene = ExtResource("2_wl4x5")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo77mdnjfisok"]
+
+[ext_resource type="Script" uid="uid://t31hpahqlu2o" path="res://scripts/carregar_cenario.gd" id="1_5fef0"]
+
+[node name="area_teste" type="Node2D"]
+script = ExtResource("1_5fef0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="Area2D"]
+polygon = PackedVector2Array(223, 159, 320, 410, 710, 437, 704, 163, 431, 184, 402, 354, 266, 236)
