@@ -1,11 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://bo77mdnjfisok"]
+[gd_scene load_steps=6 format=3 uid="uid://bo77mdnjfisok"]
 
 [ext_resource type="Script" uid="uid://t31hpahqlu2o" path="res://scripts/carregar_cenario.gd" id="1_5fef0"]
+[ext_resource type="Script" uid="uid://bfifnfdww1cdb" path="res://scenes/move_mouse_click.gd" id="2_d5d1a"]
+[ext_resource type="Script" uid="uid://bco0pw3bl7xyq" path="res://scenes/usando_dot.gd" id="3_3rxws"]
+[ext_resource type="Script" uid="uid://cwofr17q8rnt8" path="res://scenes/awaw.gd" id="3_xubk6"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_j4wyg"]
+vertices = PackedVector2Array(463, 242, 350, 60, 588, 70, 95, 942, 105, 142, 764, 964, 1178, 48, 1856, 158, 1859, 625, 1602, 1015)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 0, 5), PackedInt32Array(6, 7, 8, 9, 5, 0, 2)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(463, 242, 105, 142, 95, 942, 764, 964, 1602, 1015, 1859, 625, 1856, 158, 1178, 48, 588, 70, 350, 60)])
+agent_radius = 0.0
 
 [node name="area_teste" type="Node2D"]
 script = ExtResource("1_5fef0")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
+position = Vector2(1346, 326)
+color = Color(1.39579e-06, 0.487839, 0.491773, 1)
+offset = Vector2(-654, -509)
+polygon = PackedVector2Array(598, 513, 652, 453, 710, 510, 652, 575)
+script = ExtResource("2_d5d1a")
 
-[node name="Polygon2D" type="Polygon2D" parent="Area2D"]
-polygon = PackedVector2Array(223, 159, 320, 410, 710, 437, 704, 163, 431, 184, 402, 354, 266, 236)
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_j4wyg")
+script = ExtResource("3_xubk6")
+
+[node name="eaea" type="Polygon2D" parent="."]
+position = Vector2(571, 649)
+color = Color(1.39579e-06, 0.487839, 0.491773, 1)
+offset = Vector2(-654, -517)
+polygon = PackedVector2Array(598, 513, 652, 453, 710, 510, 656, 497)
+script = ExtResource("3_3rxws")

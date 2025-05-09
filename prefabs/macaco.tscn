@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://w3mlamx60ur5"]
+
+[ext_resource type="Script" uid="uid://sef8cn075hk0" path="res://prefabs/macaco_destroy.gd" id="1_cmpfp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmpfp"]
+size = Vector2(694.931, 368.26)
+
+[node name="Polygon2D" type="Area2D"]
+position = Vector2(2, 3)
+scale = Vector2(0.182752, 0.276978)
+script = ExtResource("1_cmpfp")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(-8.20782, -9.02602)
+polygon = PackedVector2Array(-265.387, -164.273, 336.522, -167.883, 429.544, 19.8572, 325.578, 214.819, -248.971, 207.598, -418.6, 52.3508)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.47189, 18.052)
+shape = SubResource("RectangleShape2D_cmpfp")
